@@ -64,8 +64,11 @@ public class FullscreenActivity extends AppCompatActivity {
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
-        //settings.setUseWideViewPort(true);
-        //settings.setLoadWithOverviewMode(true);
+        settings.setDefaultTextEncodingName("utf-8");
+        settings.setLoadsImagesAutomatically(true);
+        settings.setAllowContentAccess(true);
+        settings.setUseWideViewPort(true);
+        settings.setLoadWithOverviewMode(true);
         //settings.setUseWideViewPort(true);
         //settings.setSupportZoom(true);
         //settings.setBuiltInZoomControls(true);
