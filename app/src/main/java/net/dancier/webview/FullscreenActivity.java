@@ -24,8 +24,6 @@ import net.dancier.webview.databinding.ActivityFullscreenBinding;
  */
 public class FullscreenActivity extends AppCompatActivity {
 
-    private ActivityFullscreenBinding binding;
-
     private WebView webView;
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -38,7 +36,7 @@ public class FullscreenActivity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        binding = ActivityFullscreenBinding.inflate(getLayoutInflater());
+        net.dancier.webview.databinding.ActivityFullscreenBinding binding = ActivityFullscreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         webView = binding.webView;
 
@@ -60,9 +58,12 @@ public class FullscreenActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
 
+        webView.setInitialScale(0);
+        webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        webView.setScrollbarFadingEnabled(false);
+
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
-        //mContentView.setInitialScale(1);
         //settings.setUseWideViewPort(true);
         //settings.setLoadWithOverviewMode(true);
         //settings.setUseWideViewPort(true);
@@ -71,8 +72,7 @@ public class FullscreenActivity extends AppCompatActivity {
         //settings.setDisplayZoomControls(false);
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
-        webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-        webView.setScrollbarFadingEnabled(false);
+
         webView.loadUrl(WebViewClientImpl.DOMAIN);
     }
 
@@ -82,7 +82,6 @@ public class FullscreenActivity extends AppCompatActivity {
             this.webView.goBack();
             return true;
         }
-
         return super.onKeyDown(keyCode, event);
     }
 
