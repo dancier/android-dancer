@@ -11,9 +11,9 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 7,
-      "versionName": "version 1.7",
-      "outputFile": "app-release-unsigned.apk"
+      "versionCode": 8,
+      "versionName": "version 1.8",
+      "outputFile": "app-release.apk"
     }
   ],
   "elementType": "File"
