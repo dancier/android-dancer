@@ -2,7 +2,7 @@
 
 android webview wrapper for dancer homepage
 
-# apk release file unsigned
+# apk release file
 
 https://dancier.github.io/android-dancer/apk/release/app-release.apk
 
