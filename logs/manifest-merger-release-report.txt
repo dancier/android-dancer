@@ -102,7 +102,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/runne
 		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:14:9-45
 	android:dataExtractionRules
 		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:9:9-65
-activity#net.dancier.webview.FullscreenActivity
+activity#net.dancier.webview.WebViewActivity
 ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:16:9-27:20
 	android:label
 		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:20:13-45
@@ -113,7 +113,7 @@ ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidM
 	android:theme
 		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:21:13-60
 	android:name
-		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:17:13-47
+		ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:17:13-44
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/runner/work/android-dancer/android-dancer/app/src/main/AndroidManifest.xml:22:13-26:29
 action#android.intent.action.MAIN
