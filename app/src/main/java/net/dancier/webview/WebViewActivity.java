@@ -7,10 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowInsets;
 import android.webkit.WebSettings;
@@ -22,7 +19,7 @@ import net.dancier.webview.databinding.ActivityFullscreenBinding;
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-public class FullscreenActivity extends AppCompatActivity {
+public class WebViewActivity extends AppCompatActivity {
 
     private WebView webView;
 
@@ -43,6 +40,7 @@ public class FullscreenActivity extends AppCompatActivity {
         WebViewClientImpl webViewClient = new WebViewClientImpl(this);
         webView.setWebViewClient(webViewClient);
 
+
         if (Build.VERSION.SDK_INT >= 30) {
             webView.getWindowInsetsController().hide(
                     WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars());
@@ -58,23 +56,18 @@ public class FullscreenActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
 
-        webView.setInitialScale(0);
-        webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
-        webView.setScrollbarFadingEnabled(false);
+        //webView.setInitialScale(1);
+        //webView.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        //webView.setScrollbarFadingEnabled(false);
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
-        settings.setDefaultTextEncodingName("utf-8");
-        settings.setLoadsImagesAutomatically(true);
+        settings.setDomStorageEnabled(true);
+        //settings.setDefaultTextEncodingName("utf-8");
+        //settings.setLoadsImagesAutomatically(true);
         settings.setAllowContentAccess(true);
-        settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
         //settings.setUseWideViewPort(true);
-        //settings.setSupportZoom(true);
-        //settings.setBuiltInZoomControls(true);
-        //settings.setDisplayZoomControls(false);
-        settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
+        //settings.setLoadWithOverviewMode(true);
 
         webView.loadUrl(WebViewClientImpl.DOMAIN);
     }
