@@ -12,7 +12,11 @@ android {
     proc.waitForOrKill(1000)
     println "git commit count: ${commitCountOut}, git commit error: ${commitCountError}"
 
-    def code = commitCountOut.toString().toInteger()
+    def codeAsString = commitCountOut.toString();
+    if(codeAsString == null || codeAsString == ""){
+        codeAsString = 1;
+    }
+    def code = codeAsString.toInteger()
     def minVersion = code % 1000
     def majVersion = ((code - minVersion)/1000) + 1
 
