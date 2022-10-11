@@ -9,9 +9,8 @@ import android.webkit.WebViewClient;
 public class WebViewClientImpl extends WebViewClient {
 
     public static final String DOMAIN = "https://test.dancier.net/";
-    //public static final String DOMAIN = "https://domoskanonos.github.io/nidoca-webcomponents/";
 
-    private Activity activity = null;
+    private Activity activity;
 
     public WebViewClientImpl(Activity activity) {
         this.activity = activity;
